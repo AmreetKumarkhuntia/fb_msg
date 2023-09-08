@@ -1,0 +1,508 @@
+$primary-color: #1e4d91;
+$primary-light: #eff2f7;
+$text-light: #000000b3;
+$background-color-grey: #f6f6f6;
+$background-color-grey2: #edeef0;
+
+body {
+    margin: 0;
+}
+
+.modal {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: fit-content;
+    padding: 3em;
+    border-radius: 1em;
+}
+
+.avatar-container {
+    width: 3.5em;
+    height: 3.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(17, 97, 17);
+    border-radius: 100%;
+
+    .avatar {
+        text-transform: uppercase;
+        font-size: 2em;
+        color: white;
+    }
+}
+
+.signup_login_container {
+    background-color: $primary-color;
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .title-container {
+        font-size: 1.6em;
+        margin: 0.7em;
+        margin-top: 0;
+        text-align: center;
+    }
+
+    .form-container {
+        .form-title {
+            font-size: 1em;
+            text-align: left;
+            font-weight: 500;
+        }
+
+        .form-input {
+            input {
+                width: 20rem;
+                padding: .8rem;
+                margin: 0.7em 0;
+                border-radius: 0.5em;
+                border: 2px solid #80808042;
+            }
+        }
+    }
+
+    .remember-container {
+        font-size: 1em;
+
+        display: flex;
+        align-items: center;
+
+        input {
+            height: 1.2em;
+            width: 1.2em;
+            margin: 0;
+            margin-right: 1em;
+        }
+
+        span {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .button-container {
+        margin: 2em 0;
+
+        button {
+            width: 100%;
+            background-color: $primary-color;
+            height: 3em;
+        }
+    }
+
+    .link-container {
+        display: flex;
+        justify-content: center;
+
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+.navbar-container {
+    background-color: $primary-color;
+    color: white;
+    height: 100vh;
+    width: 6em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    .top-container {
+        .logo {
+            padding: 1em;
+            width: inherit;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                height: 2.5em;
+            }
+
+            .image {
+                height: 1.5em;
+                width: 1.5em;
+
+                &.active {
+                    color: white;
+                }
+            }
+
+            &.active {
+                background-color: white;
+            }
+        }
+    }
+
+    .bottom-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 1em;
+        
+        .avatar-container{
+            height: 3em;
+            width: 3em;
+        }
+    }
+}
+
+.home-container {
+    margin-left: 6em;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.homebox-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100vh;
+}
+
+.conversation-container {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    height: 100vh;
+
+
+
+    .conversationtop-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 1.2rem;
+        height: 5vh;
+        border-bottom: 1px solid #e0e0e0;
+
+
+        .title {
+            font-size: 1.6em;
+            font-weight: 700;
+            width: 70%;
+        }
+
+        .menuicon {
+            display: flex;
+            align-items: center;
+            padding-right: 1em;
+            opacity: .6;
+
+            svg {
+                width: auto;
+                height: 0.75em;
+            }
+        }
+
+        .refreshicon {
+            padding-left: 2.5em;
+            opacity: .6;
+        }
+    }
+
+    .conversationComponent_container {
+        padding: 1.2em;
+        display: flex;
+        flex-direction: column;
+
+        border-top: 2px solid $background-color-grey2;
+        border-bottom: 2px solid $background-color-grey2;
+
+        .section1 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            .body {
+                width: 75%;
+                padding-left: 1rem;
+                font-weight: 600;
+                font-size: 1em;
+
+                .conversationType {
+                    font-size: 0.8em;
+                }
+            }
+
+            .checkbox {
+                height: 1.5em;
+                width: 1.5em;
+            }
+
+            .time {
+                align-self: flex-end;
+                opacity: 0.6;
+            }
+
+        }
+
+        .section2 {
+            padding-top: 0.6em;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+
+        .section3 {
+            padding-top: 0.3rem;
+            opacity: 0.6;
+            font-size: 0.9em;
+        }
+
+        &.active {
+            background-color: $background-color-grey2;
+        }
+    }
+
+}
+
+.chatwindow-container {
+    width: 50%;
+    background-color: $background-color-grey;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $background-color-grey2;
+
+    .chatwindowtop_container {
+        padding: 1.2rem;
+        background-color: white;
+        height: 5vh;
+        border-bottom: 1px solid $background-color-grey2;
+
+
+        .username {
+            font-size: 1.6em;
+            font-weight: 700;
+        }
+    }
+
+    .chatwindowmiddle_container {
+        display: flex;
+        flex-direction: column;
+        padding-top: 1em;
+        height: 90vh;
+    }
+
+    .chatwindowbottom_container {
+        display: flex;
+        justify-content: space-around;
+        padding: 2em;
+        input{
+            background-color: white;
+            border-radius: .5em;
+            width: 35em;
+            height: 2em;
+            padding: .5em;
+        }
+    }
+
+    .messagebox_container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .accountcicleicon {
+        padding-left: 1rem;
+    }
+
+    .messagebox {
+        padding: 1rem;
+        border-radius: 8px;
+        margin-left: 1.3rem;
+        background-color: white;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    .messagewriting_box {
+        padding: 0.7rem;
+        border-radius: 8px;
+        width: 80%;
+        margin-bottom: 1.3rem;
+        background-color: white;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    .messagebox_container_right {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 1.3rem;
+        padding-top: 1.3rem;
+    }
+
+    .time_container {
+        margin-left: 4.5rem;
+        padding: 0.5rem;
+        font-size: small;
+    }
+
+    .time_container_right {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 4.5rem;
+        padding: 0.5rem;
+
+        font-size: small;
+    }
+}
+
+.userprofile-container {
+    width: 25%;
+    background-color: $primary-light;
+
+    border-left: 1px solid $background-color-grey;
+
+    .userprofiletop_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 3rem;
+        height: 35%;
+        justify-content: space-evenly;
+        background-color: white;
+
+        .userprofiletop_section2 {
+            font-size: large;
+            font-weight: 700;
+        }
+
+
+        .userprofiletop_section4 {
+            width: 100%;
+        }
+
+        .userprofile_buttons {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .callbutton,
+        .profilebutton {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 1em 0;
+
+            button{
+                color: black;
+                opacity: 0.7;
+                border: 2px solid rgba(0, 0, 0, 0.284);
+            }
+
+            .logo{
+                margin-right: 0.4em;
+            }
+        }
+    }
+
+    .userprofilebottom_container {
+        display: flex;
+        justify-content: center;
+        padding: 1em;
+
+        .details {
+            width: 20em;
+            background-color: white;
+            padding: 1em;
+            border: 2px solid $background-color-grey2;
+            border-radius: 0.5em;
+
+            .title {
+                font-size: 1.1em;
+                font-weight: 600;
+                padding: 0.2em 0;
+            }
+
+            .description {
+                display: flex;
+                padding: 0.2em 0;
+
+                .subtitle {
+                    display: block;
+                    opacity: 0.6;
+                    width: 40%;
+                }
+
+                .body {
+                    display: block;
+                    width: 60%;
+                    text-align: right;
+                }
+            }
+
+            .more {
+                padding: 0.2em 0;
+
+                a {
+                    text-decoration: none;
+                    color: blue;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+.facebook-connectpage-container {
+    background-color: $primary-color;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .title {
+        font-size: 1.2em;
+        text-align: center;
+        font-weight: 500;
+        margin-bottom: 1em;
+    }
+
+    button {
+        background-color: $primary-color;
+        margin: auto;
+        width: 20em;
+    }
+
+    .body {
+        text-align: center;
+        margin-bottom: 1em;
+    }
+
+    .btn-containers {
+        display: flex;
+        flex-direction: column;
+
+        .danger {
+            background-color: rgb(222, 1, 1);
+        }
+
+        button {
+            margin-bottom: 1em;
+        }
+    }
+}
