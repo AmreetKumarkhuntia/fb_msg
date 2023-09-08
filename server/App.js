@@ -9,18 +9,21 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 
-const app = express();
-const cors_options = {
-    origin: 'http://localhost:3000',
-    Credentials: true,
-};
-app.use(cors(cors_options));
-
-const port = 2000;
+const port = process.env.PORT || 8080;
 const app_id = process.env.APP_ID;
 const app_secret = process.env.APP_SECRET;
 const jwt_secret = process.env.JWT_SECRET;
+const monogo_URL = process.env.MONGO_URL;
+const frontend_URL = process.env.FRONTEND_URL;
 const salt = bcrypt.genSaltSync(10);
+
+//SETUP APP
+const app = express();
+const cors_options = {
+    origin: frontend_URL,
+    Credentials: true,
+};
+app.use(cors(cors_options));
 
 //SCHEMA SETUP
 
@@ -42,7 +45,7 @@ const user = mongo.model('user', userSchema);
 //MONGO DB SETUP
 
 async function connectDB() {
-    await mongo.connect('mongodb://localhost:27017/MSNGR');
+    await mongo.connect(monogo_URL);
     console.log('connected to database :)');
 }
 
@@ -246,7 +249,12 @@ app.get('/login', async (req, res) => {
 
 
 //port on which to connect
-app.listen(port, () => {
-    connectDB().catch(err => { console.log(err) });
-    console.log("listening on port " + port);
+app.listen(port, async () => {
+    try{
+        connectDB().catch(err => { console.log(err) });
+        console.log("listening on port " + port);
+    }
+    catch(err){
+        console.log(err);
+    }
 });

@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
-import {url} from '../../const';
+import { url } from '../../const';
 import Modal from '../../components/modal/index.jsx';
 import { Button } from '@mui/material';
 
@@ -13,22 +14,26 @@ const SignUp = () => {
 
     const history = useHistory();
 
+    if (rememberMe) {
+
+    }
+
     const handleClick = () => {
         fetch(`${url}signup?name=${name}&email=${email}&password=${password}`,
             {
                 method: 'POST',
             }
-        ).then((res)=>
-            res.json()).then((res) =>{
-                if(res.Error!=="None"){
+        ).then((res) =>
+            res.json()).then((res) => {
+                if (res.Error !== "None") {
                     window.alert(res.Error);
                 }
-                else{
+                else {
                     window.alert("successfully signed up");
 
                     history.push('/login');
                 }
-        });
+            });
     };
 
     return (
@@ -43,14 +48,14 @@ const SignUp = () => {
                         Name
                     </div>
                     <div className='form-input'>
-                        <input type="text" placeholder='UserName' onChange={(e)=>(setName(e.target.value))}></input>
+                        <input type="text" placeholder='UserName' onChange={(e) => (setName(e.target.value))}></input>
                     </div>
                     {/* Email container */}
                     <div className='form-title'>
                         Email
                     </div>
                     <div className='form-input'>
-                        <input type="email" placeholder='example@gmail.com' onChange={(e)=>{
+                        <input type="email" placeholder='example@gmail.com' onChange={(e) => {
                             setEmail(e.target.value);
                         }}></input>
                     </div>
@@ -59,15 +64,15 @@ const SignUp = () => {
                         Password
                     </div>
                     <div className='form-input'>
-                        <input type="password" placeholder='password' onChange={(e)=>{
+                        <input type="password" placeholder='password' onChange={(e) => {
                             setPassword(e.target.value);
                         }}></input>
                     </div>
                 </div>
                 <div className='remember-container'>
-                    <input type="checkbox" onChange={(e)=>{
+                    <input type="checkbox" onChange={(e) => {
                         setRememberMe(e.target.checked);
-                    }}/>
+                    }} />
                     <span>
                         Remember Me
                     </span>
@@ -76,7 +81,7 @@ const SignUp = () => {
                     <Button variant="contained" onClick={handleClick}> Sign Up </Button>
                 </div>
                 <div className='link-container'>
-                    Already have an account? <a href="/login">Login</a>
+                    Already have an account? <Link to="/login">Login</Link>
                 </div>
             </Modal>
         </div>

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateUser } from '../../store/features/userSlice';
 import { useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import { url } from '../../const';
 import Modal from '../../components/modal/index.jsx';
@@ -17,6 +18,10 @@ const Login = () => {
 
     let history = useHistory();
     const dispatch = useDispatch();
+
+    if(rememberMe){
+        
+    }
 
     const update = (e) => {
         dispatch(updateUser(e));
@@ -93,7 +98,7 @@ const Login = () => {
                             <Button variant="contained" onClick={handleClick}> Login </Button>
                         </div>
                         <div className='link-container'>
-                            New to MyApp? <a href="signup"> Sign Up</a>
+                            New to MyApp? <Link to="/signup"> Sign Up</Link>
                         </div>
                     </>) : (<>
                         <div className='title-container'>
