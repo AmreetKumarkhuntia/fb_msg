@@ -60,8 +60,8 @@ Messenger Manager relies on a MongoDB database to store and manage data. Follow 
      APP_SECRET = `App secret key of app`
      APP_ID = `App Id for Facebook login/messenger`
      JWT_SECRET = `JWT Secret Key(can be anything)`
-     MONGO_URL = `mongo DB database URL
-     PORT = 2000\(any other desired port)
+     MONGO_URL = `mongo DB database URL`
+     PORT = `2000\(any other desired port)`
      FRONTEND_URL = http://localhost:3000
      MONGO_ID = `Your ID`
      MONGO_PASS = `Your Pass`
