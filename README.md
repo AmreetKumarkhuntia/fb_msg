@@ -25,12 +25,29 @@ To set up the frontend of Messenger Manager, follow these simple steps:
 
 To set up the frontend of Messenger Manager, follow these simple steps:
 1. Clone this repository to your local machine.
-2. Navigate to the `client` directory:
+2. Navigate to the `server` directory:
      ```bash
      cd server
  3. Install Required Packages
     ```bash
     npm install
+
+## MongoDB Server Setup
+
+Messenger Manager relies on a MongoDB database to store and manage data. Follow these steps to set up a MongoDB server:
+
+1. **Install MongoDB**: If you haven't already, [install MongoDB](https://docs.mongodb.com/manual/installation/) on your local machine or a remote server.
+
+2. **Start MongoDB**: Start the MongoDB server. On your local machine, you can typically start MongoDB with the following command:
+
+   ```bash
+   mongod
+3. Use the Required server from MongoDBCompass or from PowerShell with a database named `MSNGR` using the following command-
+   ```bash
+   mongo
+   ```bash
+   > use MSNGR
+
 
 ## Contribution
 
