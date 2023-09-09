@@ -14,7 +14,7 @@ To start with Messenger Manager, please refer to the [Installation](#installatio
 
 To set up the frontend of Messenger Manager, follow these simple steps:
 1. Clone this repository to your local machine.
-2. Navigate to the `client` directory:
+2. Navigate to the `server` directory:
      ```bash
      cd client
  3. Install Required Packages
