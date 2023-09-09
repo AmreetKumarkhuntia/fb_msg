@@ -55,7 +55,16 @@ Messenger Manager relies on a MongoDB database to store and manage data. Follow 
    > use MSNGR
 
 ## Example environment file configuration for server
-
+     Here is an example of an environment file in the server folder - 
+     ```bash
+     APP_SECRET = `App secret key of app`
+     APP_ID = `App Id for Facebook login/messenger`
+     JWT_SECRET = `JWT Secret Key(can be anything)`
+     MONGO_URL = `mongo DB database URL
+     PORT = 2000\(any other desired port)
+     FRONTEND_URL = http://localhost:3000
+     MONGO_ID = `Your ID`
+     MONGO_PASS = `Your Pass`
 ## Contribution
 
 We welcome contributions from the community! If you'd like to contribute to the development of Messenger Manager, please review our [Contribution Guidelines](CONTRIBUTING.md) before submitting a pull request.
