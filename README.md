@@ -65,6 +65,16 @@ Messenger Manager relies on a MongoDB database to store and manage data. Follow 
      FRONTEND_URL = http://localhost:3000
      MONGO_ID = `Your ID`
      MONGO_PASS = `Your Pass`
+
+## Interface Screenshots
+1. Login Page -![Screenshot (179)](https://github.com/AmreetKumarkhuntia/fb_msg/assets/79908976/314e310f-49dc-41ec-a39e-883635313cb0)
+
+2. Sign Up Page -![Screenshot (180)](https://github.com/AmreetKumarkhuntia/fb_msg/assets/79908976/e97e3fdf-b750-4c56-962f-8c8780266e21)
+
+3. FB Connect Page -![Screenshot (182)](https://github.com/AmreetKumarkhuntia/fb_msg/assets/79908976/3a1e9cbc-2682-4459-9417-b0a22fc022db)
+
+4. Messenger Page -![Screenshot (181)](https://github.com/AmreetKumarkhuntia/fb_msg/assets/79908976/6b1df4f0-010b-41ae-9ace-026d2cfa1b8c)
+
 ## Contribution
 
 We welcome contributions from the community! If you'd like to contribute to the development of Messenger Manager, please review our [Contribution Guidelines](CONTRIBUTING.md) before submitting a pull request.
