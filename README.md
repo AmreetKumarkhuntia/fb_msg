@@ -20,6 +20,17 @@ To set up the frontend of Messenger Manager, follow these simple steps:
  3. Install Required Packages
     ```bash
     npm install
+    
+## Backend Installation
+
+To set up the frontend of Messenger Manager, follow these simple steps:
+1. Clone this repository to your local machine.
+2. Navigate to the `client` directory:
+     ```bash
+     cd server
+ 3. Install Required Packages
+    ```bash
+    npm install
 
 ## Contribution
 
