@@ -45,7 +45,6 @@ Messenger Manager relies on a MongoDB database to store and manage data. Follow 
 3. Use the Required server from MongoDBCompass or from PowerShell with a database named `MSNGR` using the following command-
    ```bash
    mongo
-   ```bash
    > use MSNGR
 
 
