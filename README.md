@@ -74,6 +74,7 @@ Messenger Manager relies on a MongoDB database to store and manage data. Follow 
 3. FB Connect Page -![Screenshot (182)](https://github.com/AmreetKumarkhuntia/fb_msg/assets/79908976/3a1e9cbc-2682-4459-9417-b0a22fc022db)
 
 4. Messenger Page -![Screenshot (181)](https://github.com/AmreetKumarkhuntia/fb_msg/assets/79908976/6b1df4f0-010b-41ae-9ace-026d2cfa1b8c)
+(This page is hardcoded as of the current version since we had no access to messenger but will add it asap.)
 
 ## Contribution
 
