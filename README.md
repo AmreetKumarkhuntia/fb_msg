@@ -6,6 +6,13 @@ Welcome to Messenger Manager, an application designed to streamline the manageme
 
 Messenger Manager is a powerful tool that simplifies the handling of business conversations on Facebook. Whether you're a small business owner, a customer support agent, or simply someone managing multiple Facebook Pages, this app is tailored to your needs.
 
+## Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+- Node.js (>=20.5.1)
+- npm (>=9.8.0) or yarn
+- mongo DB (>=5.0.8)
+
 ## Getting Started
 
 To start with Messenger Manager, please refer to the [Installation](#installation) section below for step-by-step instructions.
@@ -47,6 +54,7 @@ Messenger Manager relies on a MongoDB database to store and manage data. Follow 
    mongo
    > use MSNGR
 
+## Example environment file configuration for server
 
 ## Contribution
 
